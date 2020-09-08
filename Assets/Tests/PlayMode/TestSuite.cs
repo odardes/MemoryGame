@@ -126,12 +126,16 @@ namespace Tests
             //Arrange
             Controller control = controller.GetComponent<Controller>();
             //Act
-            foreach (Button button in control.cards)
+            for (int i =0; i<9; i+=2)
             {
-                button.onClick.AddListener(control.PickACard);
-                Assert.AreEqual(control.cards[control.firstSelectIndex].image.sprite, control.gameCard[control.firstSelectIndex]);
-                Assert.AreEqual(control.cards[control.secondSelectIndex].image.sprite, control.gameCard[control.secondSelectIndex]);
-                yield return new WaitForSeconds(3);
+                control.cards[i].onClick.AddListener(control.PickACard);
+                for(int j=1; j<10; j+=2)
+                {
+                    control.cards[j].onClick.AddListener(control.PickACard);
+                    Assert.AreEqual(control.cards[control.firstSelectIndex].image.sprite, control.gameCard[control.firstSelectIndex]);
+                    Assert.AreEqual(control.cards[control.secondSelectIndex].image.sprite, control.gameCard[control.secondSelectIndex]); 
+                    yield return new WaitForSeconds(3);
+                }
             }
         }
 
@@ -141,14 +145,16 @@ namespace Tests
             //Arrange
             Controller control = controller.GetComponent<Controller>();
             int firstCountSelection = control.countSelection; //Because we will compare them
-            //Act   
-            foreach (Button button in control.cards)
+            //Act  
+            for (int i = 0; i < 9; i += 2)
             {
-                control.firstSelection = true;
-                control.secondSelection = false;
-                button.onClick.AddListener(control.PickACard);
-                yield return null;
-                Assert.AreNotEqual(firstCountSelection, control.countSelection);
+                control.cards[i].onClick.AddListener(control.PickACard);
+                for (int j = 1; j < 10; j += 2)
+                {
+                    control.cards[j].onClick.AddListener(control.PickACard);
+                    Assert.Less(firstCountSelection, control.countSelection);
+                    yield return null;
+                }
             }
         }
 

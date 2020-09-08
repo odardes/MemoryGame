@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 18.4
+    x: 647.2
     y: 50.4
-    width: 1521.6
+    width: 888
     height: 806.4
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Inspector
   m_RootView: {fileID: 4}
-  m_MinSize: {x: 875, y: 492}
+  m_MinSize: {x: 875, y: 471}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
@@ -41,10 +41,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 271.2
-    width: 477.6
+    width: 226.4
     height: 485.2
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -67,14 +67,14 @@ MonoBehaviour:
   - {fileID: 2}
   m_Position:
     serializedVersion: 2
-    x: 765.6
+    x: 392.8
     y: 0
-    width: 477.6
+    width: 226.4
     height: 756.4
-  m_MinSize: {x: 232, y: 371}
-  m_MaxSize: {x: 10002, y: 14021}
+  m_MinSize: {x: 232, y: 392}
+  m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 117
+  controlID: 110
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -95,7 +95,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1521.6
+    width: 888
     height: 806.4
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -120,7 +120,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1521.6
+    width: 888
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -149,12 +149,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1521.6
+    width: 888
     height: 756.4
-  m_MinSize: {x: 908, y: 442}
-  m_MaxSize: {x: 22003, y: 14021}
+  m_MinSize: {x: 910, y: 421}
+  m_MaxSize: {x: 22005, y: 14042}
   vertical: 0
-  controlID: 149
+  controlID: 17
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 786.4
-    width: 1521.6
+    width: 888
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -195,12 +195,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 564
+    width: 196
     height: 756.4
-  m_MinSize: {x: 201, y: 442}
-  m_MaxSize: {x: 4001, y: 8042}
+  m_MinSize: {x: 201, y: 421}
+  m_MaxSize: {x: 4001, y: 8021}
   vertical: 1
-  controlID: 150
+  controlID: 69
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -216,12 +216,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 564
+    x: 196
     y: 0
-    width: 201.6
+    width: 196.8
     height: 756.4
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -244,7 +244,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 477.6
+    width: 226.4
     height: 271.2
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
@@ -268,9 +268,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1243.2
+    x: 619.2
     y: 0
-    width: 278.40002
+    width: 268.8
     height: 756.4
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
@@ -296,8 +296,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 564
-    height: 386.4
+    width: 196
+    height: 385.6
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
@@ -321,9 +321,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 386.4
-    width: 564
-    height: 370.00003
+    y: 385.6
+    width: 196
+    height: 370.80002
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
@@ -351,13 +351,13 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 784
+    x: 1040
     y: 352
-    width: 475.6
+    width: 224.4
     height: 464.2
   m_ViewDataDictionary: {fileID: 0}
   m_Spl:
-    ID: 189
+    ID: 191
     splitterInitialOffset: 104
     currentActiveSplitter: -1
     realSizes:
@@ -388,9 +388,9 @@ MonoBehaviour:
       uniqueId: '[MemoryGame][suite]'
       name: MemoryGame
       fullName: MemoryGame
-      resultStatus: 1
-      duration: 0.2272598
-      messages: 
+      resultStatus: 2
+      duration: 0.2028829
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -404,9 +404,9 @@ MonoBehaviour:
       uniqueId: '[Tests.dll][suite]'
       name: Tests.dll
       fullName: C:/Users/senag/Desktop/MemoryGame/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 1
-      duration: 0.1796861
-      messages: 
+      resultStatus: 2
+      duration: 0.1580004
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -420,9 +420,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][suite]
       name: Tests
       fullName: Tests
-      resultStatus: 1
-      duration: 0.1704654
-      messages: 
+      resultStatus: 2
+      duration: 0.1472683
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -436,9 +436,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/Tests/[Tests][Tests.TestSuite][suite]
       name: TestSuite
       fullName: Tests.TestSuite
-      resultStatus: 1
-      duration: 0.1591462
-      messages: 
+      resultStatus: 2
+      duration: 0.136944
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -545,11 +545,11 @@ MonoBehaviour:
       name: IncreaseCountSelectionWhenPickACArd
       fullName: Tests.TestSuite.IncreaseCountSelectionWhenPickACArd
       resultStatus: 2
-      duration: 0.1432605
-      messages: "  Expected: not equal to 0\r\n  But was:  0\r\n"
+      duration: 0.1042803
+      messages: "  Expected: less than 0\r\n  But was:  0\r\n"
       output: 
       stacktrace: 'at Tests.TestSuite+<IncreaseCountSelectionWhenPickACArd>d__13.MoveNext
-        () [0x000c0] in C:\Users\senag\Desktop\MemoryGame-master\Assets\Tests\PlayMode\TestSuite.cs:151
+        () [0x000ba] in C:\Users\senag\Desktop\MemoryGame-master\Assets\Tests\PlayMode\TestSuite.cs:155
 
         at
         UnityEngine.TestTools.TestEnumerator+<Execute>d__5.MoveNext () [0x00038]
@@ -696,12 +696,12 @@ MonoBehaviour:
       name: SetImageToCards
       fullName: Tests.TestSuite.SetImageToCards
       resultStatus: 2
-      duration: 0.110494
+      duration: 0.10981
       messages: "  Expected: <card_background (UnityEngine.Sprite)>\r\n  But was: 
         <card_red05_lieutenant (UnityEngine.Sprite)>\r\n"
       output: 
-      stacktrace: 'at Tests.TestSuite+<SetImageToCards>d__12.MoveNext () [0x00080]
-        in C:\Users\senag\Desktop\MemoryGame-master\Assets\Tests\PlayMode\TestSuite.cs:132
+      stacktrace: 'at Tests.TestSuite+<SetImageToCards>d__12.MoveNext () [0x000ac]
+        in C:\Users\senag\Desktop\MemoryGame-master\Assets\Tests\PlayMode\TestSuite.cs:135
 
         at
         UnityEngine.TestTools.TestEnumerator+<Execute>d__5.MoveNext () [0x00038]
@@ -733,12 +733,23 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1008
       parentUniqueId: Tests.dll/Tests/[Tests][Tests.TestSuite][suite]
-    m_ResultText: CountCorrectSelectionIncreases (0,121s)
-    m_ResultStacktrace: 
+    m_ResultText: "IncreaseCountSelectionWhenPickACArd (0,104s)\n---\nExpected: less
+      than 0\r\n  But was:  0\n---\nat Tests.TestSuite+<IncreaseCountSelectionWhenPickACArd>d__13.MoveNext
+      () [0x000ba] in C:\\Users\\senag\\Desktop\\MemoryGame-master\\Assets\\Tests\\PlayMode\\TestSuite.cs:155\r\nat
+      UnityEngine.TestTools.TestEnumerator+<Execute>d__5.MoveNext () [0x00038] in
+      C:\\Users\\senag\\Downloads\\MemoryGame-master\\Library\\PackageCache\\com.unity.test-framework@1.1.16\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:31"
+    m_ResultStacktrace: 'at Tests.TestSuite+<IncreaseCountSelectionWhenPickACArd>d__13.MoveNext
+      () [0x000ba] in C:\Users\senag\Desktop\MemoryGame-master\Assets\Tests\PlayMode\TestSuite.cs:155
+
+      at
+      UnityEngine.TestTools.TestEnumerator+<Execute>d__5.MoveNext () [0x00038] in
+      C:\Users\senag\Downloads\MemoryGame-master\Library\PackageCache\com.unity.test-framework@1.1.16\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:31
+
+'
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 1bff5f1d
-      m_LastClickedID: 492830491
+      m_SelectedIDs: 3a40984b
+      m_LastClickedID: 1268269114
       m_ExpandedIDs: e557abf78958ed25aac44b398359db41ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -928,17 +939,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 582.4
+    x: 843.2
     y: 80.8
-    width: 199.6
+    width: 194.8
     height: 735.4
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 283a0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: b08effffca8effff3690ffffa290ffffbc90ffff2892ffffa292ffffbc92ffff2094ffff9494ffffae94ffffae95ffff1a96ffff3496ffff2c97ffffa097ffffba97ffffba98ffff2699ffff4099ffff389affffa49affffbe9affffb69bffff229cffff3c9cffff349dffffa09dffffba9dffffb29effff1e9fffff389fffff38a0ffffa4a0ffffbea0ffffbea1ffff2ea2ffff48a2ffff40a3ffff02a4ffff1ca4ffff1ca5ffff8aa5ffffa4a5ffff9ca6ffff0aa7ffff24a7ffff1ca8ffff94a8ffffaea8ffffa8a9ffff22aaffff3caaffff3aabffff4eabffff68abffff68acffff64adffff7eadffff76aeffffdeaffffff8affffff6b0ffff52b2ffff6cb2ffff64b3ffffd8b3fffff2b3ffffeab4ffff5cb5ffff76b5ffff70b6ffffe2b6fffffcb6fffffcb7ffff10b8ffff2ab8ffff22b9ffff8eb9ffffa8b9ffffa0baffff0cbbffff26bbffff1ebcffff8ebcffffa8bcffffa8bdffff14beffff2ebeffff2ebfffff9cbfffffb6bfffffaec0ffff1cc1ffff34c1ffff5cc1ffff74c1ffff8ec1ffff86c2fffffac2ffff14c3ffff0cc4ffff78c4ffff92c4ffff8ac5fffffec5ffff18c6ffff10c7ffff7cc7ffff96c7ffff90c8ffff02c9ffff1cc9ffff1ccaffff88caffffa2caffffa2cbffff0eccffff28ccffff28cdffff9ccdffffb6cdffffaeceffff22cfffff3ccfffff34d0ffffaad0ffffc4d0ffffbcd1ffff2ad2ffff44d2ffff44d3ffffb0d3ffffcad3ffffc2d4ffff2ed5ffff48d5ffff40d6ffffb4d6ffffced6ffffc6d7ffff38d8ffff52d8ffff4ad9ffffb6d9ffffd0d9ffffcadaffffe4dafffffedafffff6dbffff6adcffff84dcffff7cddfffff6ddffff10deffff08dfffff24dfffff3edfffff36e0ffff4ae0ffff64e0ffff5ce1ffffc8e1ffffe2e1ffffe2e2ffffb0e3ffffcae3ffffc2e4ffff88e5ffffa2e5ffff9ae6ffff08e7ffff22e7ffff22e8ffff8ee8ffffa8e8ffffa8e9ffff24eaffff3eeaffff36ebffff0cecffff26ecffff06eeffff28eeffff42eeffff3aefffffb0efffffcaefffffc2f0ffff36f1ffff50f1ffffe2f1ffff58f2ffff72f2ffff56f9ffff76f9ffff90f9ffff22faffff3efbffff
+      m_ExpandedIDs: bee5ffffd8e5ffffd8e6ffffece6ffff06e7ffff5ae8ffffc8e8ffffe2e8ffffe2e9ffff50eaffff6aeaffff6aebffffaeecffffc8ecffffc8edffff4aeeffff64eeffff64efffffc0f1ffffdaf1ffffd2f2ffff46f3ffff60f3ffff60f4ffff80f4ffff9ef4ffffa4f5ffff5cfbffffec3b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -983,9 +994,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1261.6
+    x: 1266.4
     y: 80.8
-    width: 277.40002
+    width: 267.8
     height: 735.4
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
@@ -1022,9 +1033,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 784
+    x: 1040
     y: 80.8
-    width: 475.6
+    width: 224.4
     height: 250.20001
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
@@ -1051,10 +1062,10 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 9}
-    m_SelectedIDs: 663c0000
-    m_LastClickedID: 15462
-    m_ExpandedIDs: 000000004e3c0000503c0000523c0000543c00005e3c000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 5e3c0000
+    m_LastClickedID: 15454
+    m_ExpandedIDs: 00000000463c0000483c00004a3c00004c3c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1082,7 +1093,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004e3c0000503c0000523c0000543c0000
+    m_ExpandedIDs: 00000000463c0000483c00004a3c00004c3c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1113,18 +1124,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: TestSuite
-      m_OriginalName: TestSuite
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 14888
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
@@ -1137,7 +1148,7 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_SkipHiddenPackages: 1
-  m_DirectoriesAreaWidth: 219.99994
+  m_DirectoriesAreaWidth: 104.399994
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1159,10 +1170,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 18.4
-    y: 467.2
-    width: 563
-    height: 349.00003
+    x: 647.2
+    y: 466.4
+    width: 195
+    height: 349.80002
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -1170,7 +1181,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 703.75, y: 410.00003}
+  m_TargetSize: {x: 243.75, y: 411.00003}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1185,10 +1196,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -281.5
-    m_HBaseRangeMax: 281.5
-    m_VBaseRangeMin: -164.00002
-    m_VBaseRangeMax: 164.00002
+    m_HBaseRangeMin: -97.5
+    m_HBaseRangeMax: 97.5
+    m_VBaseRangeMin: -164.40001
+    m_VBaseRangeMax: 164.40001
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1206,23 +1217,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 563
-      height: 328.00003
+      width: 195
+      height: 328.80002
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 281.5, y: 164.00002}
+    m_Translation: {x: 97.5, y: 164.40001}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -281.5
-      y: -164.00002
-      width: 563
-      height: 328.00003
+      x: -97.5
+      y: -164.40001
+      width: 195
+      height: 328.80002
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 703.75, y: 436.25003}
+  m_LastWindowPixelSize: {x: 243.75, y: 437.25003}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
@@ -1249,10 +1260,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 18.4
+    x: 647.2
     y: 80.8
-    width: 563
-    height: 365.4
+    width: 195
+    height: 364.6
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: ceb883fc84424b741940f7c7995b980b

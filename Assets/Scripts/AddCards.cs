@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AddCards : MonoBehaviour
 {
-    public Transform gameField;
+    [SerializeField] private Transform gameField;
     public GameObject card;
 
     public void Awake()
