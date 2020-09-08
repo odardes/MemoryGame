@@ -3,212 +3,215 @@ using UnityEngine.TestTools;
 using System.Collections;
 using NUnit.Framework;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 namespace Tests
 {
     public class TestSuite
     {
-        [UnityTest]
-        public IEnumerator CardCreateTestsWithEnumeratorPasses() //For control testing
+        private GameObject controller;
+
+        [SetUp]                                     //Setup method will run before a unit test
+        public void Setup()
         {
-            GameObject controller = GameObject.Instantiate(Resources.Load("Prefabs/Controller")) as GameObject;
-            yield return new WaitForSeconds(5);
-            int expectedCardCount = 10;
+            controller = GameObject.Instantiate(Resources.Load("Prefabs/Controller")) as GameObject;
+        }
+
+        [TearDown]                                 //Tear Down method will run after a unit test 
+        public void Teardown()
+        {
+            GameObject.Destroy(controller);
             GameObject[] cardObjects = GameObject.FindGameObjectsWithTag("Card");
-            int result = cardObjects.Length;
-            Assert.AreEqual(expectedCardCount, result);
+            foreach(GameObject card in cardObjects)
+            {
+                GameObject.Destroy(card);
+            }
+        }
+
+        [UnityTest]
+        public IEnumerator ControllerPrefabIsNotNull() //Important for the rest
+        {
+            yield return null;
+            Assert.IsNotNull(controller);
         }
 
         [UnityTest]
         public IEnumerator CardPrefabIsNotNull() //Important for the rest
         {
-            yield return new WaitForSeconds(1);
-            var cardPrefab = Resources.Load("Prefabs/Card");
+            yield return null;
+            GameObject cardPrefab = controller.GetComponent<AddCards>().card;
             Assert.IsNotNull(cardPrefab);
         }
+
+
+        [UnityTest]
+        public IEnumerator CardCreateTestsWithEnumeratorPasses() //For control testing
+        {
+            yield return null;
+            int expectedCardCount = 10;
+            GameObject[] cardObjects = GameObject.FindGameObjectsWithTag("Card");
+            int result = cardObjects.Length;
+            Assert.AreEqual(expectedCardCount, result);
+        }
+       
 
         [UnityTest]
         public IEnumerator LoadImagesToArray()  //Awake Function - Be sure cardImages array is not empty
         {
-            GameObject controller = GameObject.Instantiate(Resources.Load("Prefabs/Controller")) as GameObject;
+            yield return null;
             Controller control = controller.GetComponent<Controller>();
             Assert.IsNotNull(control.cardImages);
-            yield return new WaitForSeconds(.5f);
         }
 
         [UnityTest]
         public IEnumerator LoadObjectsToList()  //GetCards Function - Be sure cards list is not empty
         {
-            GameObject controller = GameObject.Instantiate(Resources.Load("Prefabs/Controller")) as GameObject;
+            yield return null;
             Controller control = controller.GetComponent<Controller>();
-            control.GetCards();
             Assert.IsNotNull(control.cards);
-            yield return new WaitForSeconds(.5f);
         }
 
         [UnityTest]
         public IEnumerator LoadObjectBackgroundToList()  //GetCards Function - Be sure card list background is not empty
         {
-            GameObject controller = GameObject.Instantiate(Resources.Load("Prefabs/Controller")) as GameObject;
+            yield return null;
             Controller control = controller.GetComponent<Controller>();
-            control.GetCards();
             Sprite background = control.background;
-            Assert.AreEqual(background, control.cards[2].image.sprite);
-            yield return new WaitForSeconds(.5f);
+            foreach(Button button in control.cards)
+            {
+                Assert.AreEqual(background, button.image.sprite);
+            }
         }
 
         [UnityTest]
         public IEnumerator LoadImagesToList()  //AddCards Function - Be sure gameCards list is filling
         {
-            GameObject controller = GameObject.Instantiate(Resources.Load("Prefabs/Controller")) as GameObject;
+            yield return null;
             Controller control = controller.GetComponent<Controller>();
-            control.AddCards(control.gameCard);
             Assert.IsNotNull(control.gameCard);
-            yield return new WaitForSeconds(.5f);
-        }
-
-        [UnityTest]
-        public IEnumerator ControlLists()  //AddCards Function - Be sure gameCards and CardImages lists equal
-        {
-            GameObject controller = GameObject.Instantiate(Resources.Load("Prefabs/Controller")) as GameObject;
-            Controller control = controller.GetComponent<Controller>();
-            control.AddCards(control.gameCard);
-            Assert.AreEqual(control.gameCard[2], control.cardImages[2]);
-            yield return new WaitForSeconds(.5f);
         }
 
         [UnityTest]
         public IEnumerator SelectIndexesControl()  //PickACard Function control indexes are not null
         {
-            GameObject controller = GameObject.Instantiate(Resources.Load("Prefabs/Controller")) as GameObject;
             Controller control = controller.GetComponent<Controller>();
             //Act
-            control.GetCards();
-            control.AddCards(control.gameCard);
-            control.cards[3].onClick.AddListener(control.PickACard);
-            control.cards[4].onClick.AddListener(control.PickACard);
-            //Assert
-            yield return new WaitForSeconds(.5f);
-            Assert.IsNotNull(control.firstSelectIndex);
-            Assert.IsNotNull(control.secondSelectIndex);
+            foreach (Button button in control.cards)
+            {
+                button.onClick.AddListener(control.PickACard);
+                Assert.AreEqual(control.firstSelectIndex, int.Parse(control.cards[control.firstSelectIndex].name));
+                Assert.AreEqual(control.secondSelectIndex, int.Parse(control.cards[control.secondSelectIndex].name));
+                yield return null;
+            }
         }
 
         [UnityTest]
         public IEnumerator SelectNamesControl()  //PickACard Function control names are not null
         {
             //Arrange
-            GameObject controller = GameObject.Instantiate(Resources.Load("Prefabs/Controller")) as GameObject;
             Controller control = controller.GetComponent<Controller>();
             //Act
-            control.GetCards();
-            control.AddCards(control.gameCard);
-            control.cards[5].onClick.AddListener(control.PickACard);
-            control.cards[6].onClick.AddListener(control.PickACard);
-            //Assert
-            Assert.IsNotNull(control.firstSelectName);
-            Assert.IsNotNull(control.secondSelectName);
-            yield return new WaitForSeconds(.5f);
+            foreach (Button button in control.cards)
+            {
+                button.onClick.AddListener(control.PickACard);
+                yield return null;
+                Assert.AreEqual(control.firstSelectName, control.gameCard[control.firstSelectIndex].name);
+                Assert.AreEqual(control.secondSelectName, control.gameCard[control.secondSelectIndex].name);
+            }
         }
 
         [UnityTest]
         public IEnumerator SetImageToCards()  //PickACard Function control images is not null
         {
             //Arrange
-            GameObject controller = GameObject.Instantiate(Resources.Load("Prefabs/Controller")) as GameObject;
             Controller control = controller.GetComponent<Controller>();
             //Act
-            control.GetCards();
-            control.AddCards(control.gameCard);
-            int random1 = Random.Range(0, 6);
-            int random2 = Random.Range(6, 10);
-            control.cards[random1].onClick.AddListener(control.PickACard);
-            control.cards[random2].onClick.AddListener(control.PickACard);
-            //Assert
-            Assert.IsNotNull(control.cards[random1].image.sprite);
-            Assert.IsNotNull(control.cards[random2].image.sprite);
-            yield return new WaitForSeconds(2);
+            foreach (Button button in control.cards)
+            {
+                button.onClick.AddListener(control.PickACard);
+                Assert.AreEqual(control.cards[control.firstSelectIndex].image.sprite, control.gameCard[control.firstSelectIndex]);
+                Assert.AreEqual(control.cards[control.secondSelectIndex].image.sprite, control.gameCard[control.secondSelectIndex]);
+                yield return new WaitForSeconds(3);
+            }
         }
 
         [UnityTest]
         public IEnumerator IncreaseCountSelectionWhenPickACArd() //PickACard Function
         {
             //Arrange
-            GameObject controller = GameObject.Instantiate(Resources.Load("Prefabs/Controller")) as GameObject;
             Controller control = controller.GetComponent<Controller>();
             int firstCountSelection = control.countSelection; //Because we will compare them
-            //Act          
-            control.GetCards();
-            control.AddCards(control.gameCard);
-            int random1 = Random.Range(0, 6);
-            int random2 = Random.Range(6, 10);
-            control.cards[random1].onClick.AddListener(control.PickACard);
-            control.cards[random2].onClick.AddListener(control.PickACard);
-            yield return new WaitForSeconds(3);
-            Debug.Log(control.countSelection);
-            Debug.Log(firstCountSelection);
-            //Assert
-            Assert.AreNotEqual(firstCountSelection, control.countSelection);
+            //Act   
+            foreach (Button button in control.cards)
+            {
+                control.firstSelection = true;
+                control.secondSelection = false;
+                button.onClick.AddListener(control.PickACard);
+                yield return null;
+                Assert.AreNotEqual(firstCountSelection, control.countSelection);
+            }
         }
 
         [UnityTest]
         public IEnumerator DisappearWhenMatches() //PickACard Function =>  IEnumerator CheckTheCards()
         {
             //Arrange
-            GameObject controller = GameObject.Instantiate(Resources.Load("Prefabs/Controller")) as GameObject;
-            Controller control = controller.GetComponent<Controller>();
-            control.firstSelectName = "Equal";
-            control.secondSelectName= "Equal";
+            Controller control = controller.GetComponent<Controller>();            
             //Act
-            control.GetCards();
-            control.AddCards(control.gameCard);
-            control.CheckTheCards();
-            yield return new WaitForSeconds(3);
-            Debug.Log(control.firstSelectName);
-            Debug.Log(control.secondSelectName);
-            //Assert
-            Assert.IsFalse(control.cards[control.firstSelectIndex].interactable);
-            Assert.IsFalse(control.cards[control.secondSelectIndex].interactable);           
+            foreach (Button button in control.cards)
+            {
+                control.firstSelectName = "Equal";
+                control.secondSelectName = "Equal";
+                button.onClick.AddListener(control.PickACard);
+                yield return null;
+                Assert.IsFalse(control.cards[control.firstSelectIndex].interactable);
+                Assert.IsFalse(control.cards[control.secondSelectIndex].interactable);
+            }
         }
       
 
         [UnityTest]
         public IEnumerator SetBackgroundWhenNotMatches() //PickACard Function controls set the background again when not matched
         {
+            yield return null;
             //Arrange
-            GameObject controller = GameObject.Instantiate(Resources.Load("Prefabs/Controller")) as GameObject;
             Controller control = controller.GetComponent<Controller>();
             Sprite background = control.background;
-            control.firstSelectName = "First Select Name";
-            control.secondSelectName = "Second Select Name"; //Sets different strings
-            //Act           
-            control.GetCards();
-            control.AddCards(control.gameCard);
-            control.cards[5].onClick.AddListener(control.PickACard);
-            control.cards[6].onClick.AddListener(control.PickACard);
-            //Assert
-            Assert.AreEqual(background, control.cards[control.firstSelectIndex].image.sprite);
-            Assert.AreEqual(background, control.cards[control.secondSelectIndex].image.sprite);
-            yield return new WaitForSeconds(.5f);
+            //Act          
+            foreach (Button button in control.cards)
+            {
+                control.firstSelectName = "First Select Name";
+                control.secondSelectName = "Second Select Name"; //Sets different strings
+                button.onClick.AddListener(control.PickACard);
+                yield return null;
+                Assert.AreEqual(background, control.cards[control.firstSelectIndex].image.sprite);
+                Assert.AreEqual(background, control.cards[control.secondSelectIndex].image.sprite);
+            }
         }
 
         [UnityTest]
         public IEnumerator CountCorrectSelectionIncreases() //IsTheGameFinished() function controls countcorrectselection increases
         {
+            yield return null;
             //Arrange
             GameObject controller = GameObject.Instantiate(Resources.Load("Prefabs/Controller")) as GameObject;
             Controller control = controller.GetComponent<Controller>();
             int correct = control.countCorrectSelection;
             //Act
-            control.IsTheGameFinished();
-            //Assert
-            Assert.AreNotEqual(correct, control.countCorrectSelection);
-            yield return new WaitForSeconds(.5f);
+            foreach (Button button in control.cards)
+            {
+                control.firstSelectName = "Equal";
+                control.secondSelectName = "Equal";
+                button.onClick.AddListener(control.PickACard);
+                yield return null; 
+                Assert.AreNotEqual(correct, control.countCorrectSelection);
+            }                       
         }
 
         [UnityTest]
         public IEnumerator ShuffleTheList()  //Shuffle function controls the list is mixed
         {
-            GameObject controller = GameObject.Instantiate(Resources.Load("Prefabs/Controller")) as GameObject;
+            yield return null;
             Controller control = controller.GetComponent<Controller>();
             //Arrange
             yield return new WaitForSeconds(5);

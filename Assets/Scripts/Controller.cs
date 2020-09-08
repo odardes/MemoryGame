@@ -15,7 +15,7 @@ public class Controller : MonoBehaviour
 
     public bool firstSelection, secondSelection;
 
-    public int countSelection=0;
+    public int countSelection;
     public int countCorrectSelection;                    //Should be 5 for finish the game
 
     public int firstSelectIndex, secondSelectIndex;
